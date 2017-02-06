@@ -1,0 +1,14 @@
+.DS_Store
+.idea/
+.vscode/
+node_modules/
+reports/
+screenshots/
+temp/
+selenium-debug.log
+nightwatch-tmp.json
+raincatcher-demo-uart.sublime-workspace
+dist/*
+output/*
+npm-debug.log
+report.htm
