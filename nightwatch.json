@@ -1,0 +1,105 @@
+{
+  "live_output": false,
+  "selenium": {
+    "server_path": "node_modules/selenium-server/lib/runner/selenium-server-standalone-3.0.1.jar",
+    "start_process": true,
+    "log_path": "",
+    "host": "127.0.0.1",
+    "port": 4444,
+    "cli_args": {
+      "webdriver.chrome.driver": "node_modules/chromedriver/lib/chromedriver/chromedriver",
+      "webdriver.gecko.driver": "node_modules/geckodriver/bin/geckodriver",
+      "webdriver.ie.driver": ""
+    }
+  },
+  "standalone": true,
+  "jar_path": "node_modules/selenium-server/lib/runner/selenium-server-standalone-3.0.1.jar",
+  "globals": {},
+  "globals_path": "./globals.js",
+  "custom_commands_path": "e2e/utils/commands",
+  "custom_assertions_path": "e2e/utils/assertions",
+  "page_objects_path": "e2e/pages",
+  "src_folders": ["e2e/tests"],
+  "output_folder": "reports/e2e",
+  "testWorkers": {
+    "enabled": true,
+    "workers": 4
+  },
+    "test_settings": {
+    "phantomjs": {
+      "desiredCapabilities": {
+        "phantomjs.binary.path": "node_modules/phantomjs/bin/phantomjs",
+        "browserName": "phantomjs"
+      }
+    },
+    "internetExplorer": {
+      "desiredCapabilities": {
+        "browserName": "internet explorer"
+      }
+    },
+    "chrome": {
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "no-sandbox",
+            "user-data-dir=/tmp/chrome",
+            "no-default-browser-check",
+            "unlimited-storage"
+          ]
+        }
+      }
+    },
+    "safari": {
+      "desiredCapabilities": {
+        "browserName": "safari"
+      }
+    },
+    "firefox": {
+      "desiredCapabilities": {
+        "browserName": "firefox"
+      }
+    },
+    "default": {
+      "silent": true,
+      "screenshots": {
+        "enabled": true,
+        "onFail": true,
+        "onSeleniumError": false,
+        "path": "screenshots"
+      },
+      "use_jquery": true,
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "phantomjs.binary.path": "node_modules/phantomjs/bin/phantomjs"
+      },
+      "exclude": [],
+      "globals": {
+        "waitForConditionTimeout": 30000
+      }
+    },
+    "local": {
+      "globals": {
+        "wfm": {
+          "admin_username": "trever",
+          "admin_password": "123",
+          "host": "http://localhost:9003/?url=http://localhost:8001",
+          "mobile_host": "http://localhost:9002/?url=http://localhost:8001"
+        }
+      }
+    },
+    "ci": {
+      "info": "Configuration for raincatcher-demo-uart as run in Central CI",
+      "globals": {
+        "wfm": {
+          "admin_username": "trever",
+          "admin_password": "123",
+          "host": "CHANGE ME",
+          "mobile_host": "CHANGE ME"
+        }
+      }
+    }
+  }
+}
