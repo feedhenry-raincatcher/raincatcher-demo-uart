@@ -1,0 +1,31 @@
+{
+  "name": "raincatcher-demo-uart",
+  "version": "0.0.1",
+  "description": "User Acceptance and Regression Tests for Raincatcher Demo Solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt uart:local"
+  },
+  "repository": {
+    "type": "git",
+    "url": "noope"
+  },
+  "author": "Vitalii Chepeliuk<vchepeli@redhat.com>, Petr Stribny <pstribny@redhat.com>, Jan Hellar<jhellar@redhat.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chai-things": "^0.2.0",
+    "chromedriver": "^2.27.2",
+    "es6-promise": "^4.0.5",
+    "geckodriver": "^1.3.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-nightwatch": "^0.5.4",
+    "lodash": "^4.17.4",
+    "mocha": "^3.2.0",
+    "mocha-bdd-steps": "0.0.3",
+    "nightwatch": "^0.9.12",
+    "selenium-server": "^3.0.1",
+    "winston": "^2.3.1"
+  }
+}
